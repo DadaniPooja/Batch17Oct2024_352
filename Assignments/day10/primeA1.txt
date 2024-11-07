@@ -17,7 +17,7 @@ Description: module isPrime and prime
              bool isPrime(int n)
              int prime(int n)
  Author: Pooja
- DOC: 07/11/123454321
+ DOC: 07/11/2024
 */
 
 //link section : working with scanf and printf statements
