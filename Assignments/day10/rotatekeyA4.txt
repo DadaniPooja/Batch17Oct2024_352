@@ -1,0 +1,73 @@
+/*
+A4. rotate array every kth element
+
+1 2 3 4 5 6 7 8 9
+
+k= 3
+
+3 2 1 6 5 4 9 8 7
+
+Description: module rotate
+              int rotate(int [], int n, int key)
+              accessing the array elements of n numbers and
+              searching the key value.
+ Author: Pooja
+ DOC: 07/11/123454321
+ */
+
+//link section : working with scanf and printf statements
+#include <stdio.h>
+
+//function prototype
+int rotate(int [], int, int);
+
+//main function where the number of array elements are entered i.e n and elements are printed
+//declaring the key value to search and passing the rotate function.
+int main()
+{
+    int a[]={1, 2, 3, 4, 5, 6, 7, 8, 9};  // array elements
+    int key,n,i;
+    
+    n=sizeof(a)/sizeof(a[0]);
+    
+    for(i=0;i<n;i++)
+        printf("%d ",a[i]);  // printing original series
+    printf("\n");
+    
+    key=3;
+    printf("Key = %d\n",key); // key value
+    
+    rotate(a, n, key); // passing function
+    return 0;
+}
+
+//the rotate function is called from the main
+int rotate(int a[],int n,int key)
+{
+    int i,j,temp; // taking temp for storing for temporary
+    
+    for(i=0;i<n;i+=key)
+    {
+        if(i+key-1<n)
+        {
+            for(j=0;j<key/2;j++)      // swaping values
+            {
+                temp=a[i+j];       
+                a[i+j]=a[i+key-1-j];
+                a[i+key-1-j]=temp;
+            }
+        }
+    }
+    for(i=0;i<n;i++)
+        printf("%d ",a[i]);   // printing after rotation
+    printf("\n");
+}
+
+
+
+
+OUTPUT:
+
+1 2 3 4 5 6 7 8 9
+Key = 3
+3 2 1 6 5 4 9 8 7
