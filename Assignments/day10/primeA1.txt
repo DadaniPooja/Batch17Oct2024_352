@@ -59,7 +59,7 @@ int prime(int n)
 		}
 	}
 
-	if (cnt > 0)
+	if(cnt>0)
 		printf("NoofWays = %d\n", cnt);
 	else
 		printf("NoofWays = -1\n");
