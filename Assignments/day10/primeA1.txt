@@ -78,3 +78,13 @@ int main()
 	prime(num);
 	return 0;
 }
+
+
+OUTPUT:
+
+Enter a positive integer: 34
+34 = 3 + 31
+34 = 5 + 29
+34 = 11 + 23
+34 = 17 + 17
+NoofWays = 4
