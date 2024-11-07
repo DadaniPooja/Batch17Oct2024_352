@@ -84,3 +84,14 @@ int nthNumber(int n) {
     }
     return num;
 }
+
+
+
+OUTPUT:
+Enter the test cases: 2
+
+Enter the input: 6
+The 6th number is: 14
+
+Enter the input: 21
+The 21th number is: 111
