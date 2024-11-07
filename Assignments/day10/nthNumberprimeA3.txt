@@ -1,0 +1,91 @@
+/*
+A3. Write a program to find the  n-th number made of prime digits
+
+Input Format:
+First Line Of Input Contains T Number Of Test Cases
+Second Line Of Input Contains an input Number N.
+
+Output Format:
+Print the Nth number of sequence and it should be only prime.
+
+Constraints:
+1<=T<=100
+1<=N<=10000
+
+Examples :
+Input  :
+1
+10
+Output :
+ 33
+ 
+ Description: module nthNumberprime
+              int nthNumberprime(int n)
+              
+ Author: Pooja
+ DOC: 07/11/2024
+ */
+
+//link section : working with scanf and printf statements
+#include <stdio.h>
+ 
+//function prototype
+int nthNumberprime(int);
+
+// main function which uses test cases and inputs
+int main() 
+{
+    int t;
+  
+    printf("Enter the test cases: ");
+    scanf("%d", &t);
+    printf("\n");
+  
+    while(t--) 
+    {
+        int n, result;
+        printf("\nEnter the input: ");
+        scanf("%d", &n);
+ 
+        result=nthNumberprime(n);
+        printf("%d\n",result);
+    }
+ 
+    return 0;
+}
+ 
+// nthNumberprime function called to perform task
+int nthNumberprime(int n) 
+{
+    int cnt=0, temp, flag, d, i;
+    
+    for(i=2; ;i++)
+    {
+        temp=i;
+        flag=1;
+    while(temp>0) 
+    {
+        d=temp%10;
+        if(d!=2 && d!=3 && d!=5 && d!= 7) 
+        {
+                flag = 0;
+                break;
+        }
+        temp/=10;
+    }
+    if(flag)
+        cnt++;
+    if(cnt==n)
+        return i;
+    }
+}
+
+
+
+OUTPUT:
+
+Enter the test cases: 1
+
+
+Enter the input: 10
+33
